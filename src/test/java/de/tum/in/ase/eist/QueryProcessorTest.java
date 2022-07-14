@@ -2,8 +2,7 @@ package de.tum.in.ase.eist;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.*;
 
 class QueryProcessorTest {
 
@@ -29,5 +28,11 @@ class QueryProcessorTest {
 			fail("Your QueryProcessor should not be case sensitive.");
 		}
 	}
+
+	@Test
+	void isNameCorrect() {
+		assertEquals("basicweb",queryProcessor.process("name"));
+	}
+
 
 }
